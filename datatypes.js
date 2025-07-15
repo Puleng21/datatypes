@@ -4,22 +4,73 @@ function myFunction() {
 fruit = 'apple'; // Considered global
 console.log(typeof petName + '- ' + 'My pet name is ' +petName)
 }
-console.log(typeof petName + '- ' + 'My pet name is ' + petName +'Fruit name is ' + fruit)
+console.log(typeof petName + '- ' + 'My pet name is ' + petName + 'Fruit name is ' + fruit)
 
-let a = true;
-let b = false;
 
-alphabet();
+// 1. Number (Integer and Float)
+function showNumberTypes() {
+    let age = 30;
+    let weight = 12.5;
+    console.log(typeof age + ' - Age: ' + age);
+    console.log(typeof weight + ' - Weight: ' + weight);
+}
 
-function alphabet() {
+// 2. String
+function showStringType() {
+    let name = "Rocky";
+    console.log(typeof name + ' - Name: ' + name);
+}
 
-    let result1 = typeof alphabet + 5 < 3;
-    console.log("Resul 1:", result1); 
-    console.log( typeof result1); 
+// 3. Boolean
+function showBooleanType() {
+    let isPet = true;
+    console.log(typeof isPet + ' - Is it a pet? ' + isPet);
+}
 
-   
-    let result2 = typeof +a && b;
-    console.log("Result 2:", result2); 
-    console.log( typeof result2); 
+// 4. Undefined
+function showUndefinedType() {
+    let notSet;
+    console.log(typeof notSet + ' - This variable is declared but not defined');
+}
 
+// 5. Null
+function showNullType() {
+    let emptyValue = null;
+    console.log(typeof emptyValue + ' - Null value');
+}
+
+// 6. Object
+function showObjectType() {
+    let pet = {
+        name: "Rocky",
+        weight: 12.5,
+        type: "dog"
+    };
+    console.log(typeof pet + ' - Pet object: ' + JSON.stringify(pet));
+}
+
+// 7. Array
+function showArrayType() {
+    let colors = ['red', 'blue', 'green'];
+    console.log(typeof colors + ' - Favorite colors: ' + colors.join(', '));
+}
+
+// 8. Function
+function showFunctionType() {
+    function greet() {
+        return "Hello!";
+    }
+    console.log(typeof greet + ' - Greeting: ' + greet());
+}
+
+// 9. Symbol
+function showSymbolType() {
+    let id = Symbol('id');
+    console.log(typeof id + ' - Symbol');
+}
+
+// 10. BigInt
+function showBigIntType() {
+    let bigNumber = 1234567890123456789012345678901234567890n;
+    console.log(typeof bigNumber + ' - BigInt number');
 }
